@@ -16,46 +16,50 @@ public class AccountHolder {
 		this.pin= pin;
 	}
 	
-	public void setAccNo(String accNo){
-		accNo=accNo;
+	public void setAccNo(String tAccNo){
+		accNo=tAccNo;
 	}
 	
 	public String getAccNo(){
 		return accNo;
 	}
-	public void setName(String name){
-		name=name;
+	public void setName(String tName){
+		name=tName;
 	}
 	
 	public String getName(){
 		return accNo;
 	}
-	public void setAddress(String address){
-		address=address;
+	public void setAddress(String tAddress){
+		address=tAddress;
 	}
 	
 	public String address(){
 		return address;
 	}
-	public void setTelNo(int telNo){
-		telNo=telNo;
+	public void setTelNo(int tTelNo){
+		telNo=tTelNo;
 	}
 	
 	public int getTelNo(){
 		return telNo;
 	}
-	public void setDob(String dob){
-		dob=dob;
+	public void setDob(String tDob){
+		dob=tDob;
 	}
 	
 	public String getDob(){
 		return dob;
 	}
-	public void setPin(String pin){
-		accNo=accNo;
+	public void calPin(){
+		int randomPin = random.nextInt(99999);
+		while(randomPin<11111 || randomPin==....){		//check whether the pin already exists in the DB
+			int randomPin = random.nextInt(99999);	
+		}
+		pin=randomPin;
 	}
 	
-	public String getPin(){
+	public int getPin(){
 		return pin;
 	}
 
