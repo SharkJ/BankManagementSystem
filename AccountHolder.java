@@ -1,7 +1,7 @@
 
 public class AccountHolder {
-	private String accNo,name,address;
-	private int telNo,dob,pin;
+	private String accNo,name,address,dob;
+	private int telNo,pin;
 	
 	AccountHolder(){
 	}
@@ -44,11 +44,11 @@ public class AccountHolder {
 	public int getTelNo(){
 		return telNo;
 	}
-	public void setDob(int dob){
+	public void setDob(String dob){
 		dob=dob;
 	}
 	
-	public int getDob(){
+	public String getDob(){
 		return dob;
 	}
 	public void setPin(String pin){
