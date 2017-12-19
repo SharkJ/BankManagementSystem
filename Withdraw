@@ -1,9 +1,9 @@
 public class Withdraw{
-  String accID="ACC0001";
+  	String accID="ACC0001";
 	//String pin="12345";
 	String type="Fixed Deposit";
 	String holderID="H0003";
-  float amount=(float) 100.00;
+  	float amount=(float) 100.00;
   
   Account newWithdrawal=new Account();    //Assumed table Account exists
   
