@@ -1,0 +1,81 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JPasswordField;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.sql.PreparedStatement;
+import java.awt.event.ActionEvent;
+
+public class Login extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField username;
+	private JPasswordField passwordField;
+    private JLabel lblError;
+    private static Login frame;
+    ConnectToDatabase
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					 frame = new Login();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Login() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 635, 456);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblUsername = new JLabel("AccountNo");
+		lblUsername.setBounds(33, 91, 238, 46);
+		contentPane.add(lblUsername);
+		
+		username = new JTextField();
+		username.setBounds(281, 104, 220, 20);
+		contentPane.add(username);
+		username.setColumns(10);
+		
+		JLabel lblPin = new JLabel("PIN");
+		lblPin.setBounds(33, 186, 238, 46);
+		contentPane.add(lblPin);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(281, 199, 227, 20);
+		contentPane.add(passwordField);
+		
+		JButton btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+		
+			}
+		});
+		btnLogin.setBounds(163, 291, 303, 39);
+		contentPane.add(btnLogin);
+		
+	 lblError = new JLabel("ERROR");
+		lblError.setBounds(281, 255, 67, 25);
+		contentPane.add(lblError);
+		lblError.setVisible(false);
+	}
+}
