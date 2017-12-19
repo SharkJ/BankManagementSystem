@@ -1,8 +1,11 @@
 
 public class AccountHolder {
-  private String accNo,name,address,telNo,dob,pin;
+	private String accNo,name,address;
+	private int telNo,dob,pin;
+	
 	AccountHolder(){
 	}
+	
 	AccountHolder(String accID,String name,String address,String telNo,String dob,String pin)
 	{
 		this.accID= accID;
@@ -12,6 +15,7 @@ public class AccountHolder {
 		this.dob= dob;
 		this.pin= pin;
 	}
+	
 	public void setAccNo(String accNo){
 		accNo=accNo;
 	}
