@@ -6,7 +6,7 @@ public class AccountHolder {
 	AccountHolder(){
 	}
 	
-	AccountHolder(String accID,String name,String address,String telNo,String dob,String pin)
+	AccountHolder(String accID,String name,String address,int telNo,int dob,int pin)
 	{
 		this.accID= accID;
 		this.name=name;
