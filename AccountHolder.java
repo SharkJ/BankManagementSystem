@@ -6,9 +6,9 @@ public class AccountHolder {
 	AccountHolder(){
 	}
 	
-	AccountHolder(String accID,String name,String address,int telNo,int dob,int pin)
+	AccountHolder(String accNo,String name,String address,int telNo,String dob,int pin)
 	{
-		this.accID= accID;
+		this.accNo= accNo;
 		this.name=name;
 		this.address= address;
 		this.telNo= telNo;
@@ -34,7 +34,7 @@ public class AccountHolder {
 		address=tAddress;
 	}
 	
-	public String address(){
+	public String getAddress(){
 		return address;
 	}
 	public void setTelNo(int tTelNo){
@@ -52,15 +52,16 @@ public class AccountHolder {
 		return dob;
 	}
 	public void calPin(){
-		int randomPin = random.nextInt(99999);
-		while(randomPin<11111 || randomPin==....){		//check whether the pin already exists in the DB
-			int randomPin = random.nextInt(99999);	
+                Random rand = new Random();
+		int randomPin = rand.nextInt(99999) + 11111;
+		while(randomPin==123){		//check whether the pin already exists in the DB
+			randomPin =  rand.nextInt(88888) + 11111;	
 		}
-		pin=randomPin;
+                pin=randomPin;
+		
 	}
 	
 	public int getPin(){
 		return pin;
 	}
-
 }
